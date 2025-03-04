@@ -104,12 +104,21 @@ Muestra solo los números que son divisibles por 2 y 3 al mismo tiempo.
 Ordena la lista de menor a mayor y muéstrala.
 """
 lista = []
+divisible = []
 i = 0
 
 for i in range(7):
     numero = int(input(f"ingrese el {i+1} numero: "))
     lista.append(numero)
+    if lista[i] % 2 == 0 and lista[i] % 3 == 0:
+        divisible.append(lista[i])
 
 pares = list(filter(lambda x: x % 2 == 0, lista))
+inpares = list(filter(lambda x: x % 2 != 0, lista))
 
 print(pares)
+print(inpares)
+print(f"Cantidad de numeros pares: {len(pares)}")
+print(f"Cantidad de numeros inpares: {len(inpares)}")
+print(f"los numeros divisibles por 2 y 3: {divisible}")
+
