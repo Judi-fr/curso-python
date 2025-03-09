@@ -103,6 +103,7 @@ Indica cuántos de esos números son pares y cuántos son impares.
 Muestra solo los números que son divisibles por 2 y 3 al mismo tiempo.
 Ordena la lista de menor a mayor y muéstrala.
 """
+"""
 lista = []
 divisible = []
 i = 0
@@ -111,7 +112,7 @@ for i in range(7):
     numero = int(input(f"ingrese el {i+1} numero: "))
     lista.append(numero)
     if lista[i] % 2 == 0 and lista[i] % 3 == 0:
-        divisible.append(lista[i])
+despues contador 0+        divisible.append(lista[i])
 
 pares = list(filter(lambda x: x % 2 == 0, lista))
 inpares = list(filter(lambda x: x % 2 != 0, lista))
@@ -121,4 +122,91 @@ print(inpares)
 print(f"Cantidad de numeros pares: {len(pares)}")
 print(f"Cantidad de numeros inpares: {len(inpares)}")
 print(f"los numeros divisibles por 2 y 3: {divisible}")
+"""
 
+"""
+from time import sleep
+
+contador=10
+while contador > 0:
+    print(contador)
+    sleep(1)
+    contador -= 1
+
+print("¡BOOOOOM!")
+"""    
+"""
+Modificar cada elemento de las canciones,
+agregando un número al principio, usando for
+Ej:
+1. Adicto - Tini
+2. Bzrp Music Sessions, Vol. 44 - Tini
+3. ...
+"""
+
+"""
+canciones = [
+    "La Gota Fría - Juanes",
+    "La Bicicleta - Carlos Vives",
+    "La Curandera - Shakira",
+    "La Camisa Negra - Juanes",
+    "La Vida Es Un Carnaval - Carlos Vives",
+    "La Incondicional - Shakira",
+    "La Tortura - Shakira",
+    "La Llorona - Juanes",
+    "La Vida Es Un Carnaval - Carlos Vives",
+    "La Incondicional - Shakira"
+]
+
+indice=0
+
+for caracter in canciones:
+    canciones[indice] = f"{indice+1}. {canciones[indice]}"
+    print(canciones[indice])
+    indice += 1
+
+"""
+
+"""
+Modificar el código para que:
+- Si el usuario no llega a ingresar un número válido, se vuelve a
+solicitar la entrada de datos
+"""
+while True:
+    tabla = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    resultados = []
+    entrada = input("Dame un número y te daré su tabla de multiplicación: ")
+    caso_positivo = entrada.isdecimal()
+    caso_negativo = entrada[0] == "-" and entrada[1:].isdecimal()
+    numero = 0
+    for numero in entrada:
+        if entrada[numero].isdecimal():
+            print("ingresa un numero sin letras")
+    if caso_positivo or caso_negativo:
+        break
+    else:
+        print("No has ingresado un número")
+
+numero = int(entrada)
+for i in tabla:
+    multiplicacion = i * numero
+    resultados.append(multiplicacion)
+print(tabla)
+print(resultados)
+
+"""
+lista_producto_precio = [
+    ["vaso", 100],
+    ["plato", 200],
+    ["tenedor", 300],
+    ["cuchara", 400],
+    ["cuchillo", 500],
+]
+
+lista_final=[]
+
+for producto, precio in lista_producto_precio:
+    resultado = lista_producto_precio[indice][1]  * 10 /100
+    lista_producto_precio[indice][1].append(resultado)
+
+"""
