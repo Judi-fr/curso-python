@@ -171,29 +171,22 @@ for caracter in canciones:
 Modificar el código para que:
 - Si el usuario no llega a ingresar un número válido, se vuelve a
 solicitar la entrada de datos
-"""
-"""while True:
-    tabla = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    resultados = []
-    entrada = input("Dame un número y te daré su tabla de multiplicación: ")
-    caso_positivo = entrada.isdecimal()
-    caso_negativo = entrada[0] == "-" and entrada[1:].isdecimal()
-    caso_complejo = entrada[0] == " " and entrada[0] = not "-"
-     
+tabla = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+resultados = []
+entrada = input("Dame un número y te daré su tabla de multiplicación: ")
+caso_positivo = entrada.isdecimal()
+caso_negativo = entrada[0] == "-" and entrada[1:].isdecimal()
 
-    if caso_positivo or caso_negativo:
-        break
-    
-    else:
-        print("No has ingresado un número")
+if caso_positivo or caso_negativo:
+    numero = int(entrada)
+    for i in tabla:
+        multiplicacion = i * numero
+        resultados.append(multiplicacion)
+else:
+    print("No has ingresado un número")
 
-numero = int(entrada)
-for i in tabla:
-    multiplicacion = i * numero
-    resultados.append(multiplicacion)
 print(tabla)
 print(resultados)
-"""
 """
 lista_producto_precio = [
     ["vaso", 100],
@@ -204,108 +197,13 @@ lista_producto_precio = [
 ]
 
 lista_final=[]
+x=0
 
-for producto, precio in lista_producto_precio:
-    resultado = lista_producto_precio[indice][1]  * 10 /100
-    lista_producto_precio[indice][1].append(resultado)
-
-"""
-"""
-def preguntar_nombre():
-    name=input("cual es tu nombre: ")
-    return name
-        
-def saludar_con_nombre(nombre):
-    print(f"¡Hola {nombre}!")
-
-def funcion_principal():
-    nombre=preguntar_nombre()
-    saludar_con_nombre(nombre)
+for producto,precio in lista_producto_precio:
+    resultado = precio * (10 /100)
+    resultado = precio + resultado
+    lista_final.append(resultado)
     
-funcion_principal()"""
-
-"""
-Dada la siguiente lista:
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-Crear una función que imprima los cuadrados de cada número de la lista
-"""
-"""
-def elevado_al_cuadrado():
-    for numero in lista:
-        cuadrados = numero **2
-        print(f"el {numero} elevado al cuadrado es {cuadrados}")
-
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-elevado_al_cuadrado()    """
-
-"""
-Crear una función que reciba una cadena y devolver la cadena convertida en mayúsculas
-y mostrar el resultado fuera de la función.
-Si el resultado es una cadena vacía, mostrar un mensaje indicando que la cadena está vacía.
-De lo contrario, mostrar la cadena.
-"""
-"""
-def conv_mayusculas(lista):
-    return lista.upper()
-    
-listarda=input("ingrese una cadena > ")
-mayuscula=conv_mayusculas(listarda)
-
-if mayuscula=="":
-    print("la cadena esta vacia")
-
-else:
-    print(mayuscula)"""
-
-#forma correcta de programar es creando funciones y ejecutandolas en el main este programa deberia ser asi:
-#def ingresar_cadena()
-#def convertir_a_mayuscula()
-#def mostrar_cadena()
-#def main()
-#en este ultimo se tiene que ejecutar funcion por funcion para poder conformar el programa
-#esta es la forma correcta de 
+    print(f"{producto} con aumento del 10% = {resultado}")
 
 
-#PRODUCTO MINIMO VIABLE? GOOGLEAR
-#SPRIN
-
-"""
-Crear una lista de invitados.
-A cada uno saludarlo de la misma forma, pero personalizando el saludo con su nombre.
-"""
-
-
-"""
-lista_de_invitado = ["ezequiel","esteban", "hernesto"]
-
-def saludo(lista):
-    for nombre in lista:
-        print(f"Hola {nombre} te doy la bienvenida a la conferencia, te quiero mucho, sos unico para mi, te amo <3")
-
-saludo(lista_de_invitado)"""
-
-
-"""def sumar(a,b):
-    resultado=a+b
-    return resultado
-
-def restar(a,b):
-    resultado=a-b
-    return resultado
-
-def multiplicar(a,b):
-    resultado=a*b
-    return resultado
-
-def dividir(a,b):
-    resultado=a/b
-    return resultado
-
-lista=[sumar,restar,multiplicar,dividir]
-
-def main():
-    for operacion in lista:
-        resultado=operacion(5,5)
-        print(resultado)
-
-main()"""
