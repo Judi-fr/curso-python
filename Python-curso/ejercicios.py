@@ -210,6 +210,7 @@ for producto, precio in lista_producto_precio:
     lista_producto_precio[indice][1].append(resultado)
 
 """
+#EJERCISIOS CLASE 4
 """
 def preguntar_nombre():
     name=input("cual es tu nombre: ")
@@ -309,3 +310,21 @@ def main():
         print(resultado)
 
 main()"""
+
+#EJERCITASION CASERA CLASE 4
+
+"""Contar vocales:
+Crea una función que reciba una cadena y devuelva la cantidad de vocales que contiene."""
+
+def vocales(lista):
+    indice=0
+    vocalez="aeiouAEIOU"
+    for letra in lista:
+        if letra in vocalez:
+            indice+=1
+
+    print(f"las cantidad de vocales en {lista} son: {indice}")
+    indice=0
+
+list="ezequielito es un capito"
+vocales(list)
