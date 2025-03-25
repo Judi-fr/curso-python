@@ -311,12 +311,12 @@ def main():
 
 main()"""
 
-#EJERCITASION CASERA CLASE 4
+#EJERCITACION CASERA CLASE 4
 
 """Contar vocales:
 Crea una función que reciba una cadena y devuelva la cantidad de vocales que contiene."""
 
-def vocales(lista):
+"""def vocales(lista):
     indice=0
     vocalez="aeiouAEIOU"
     for letra in lista:
@@ -327,4 +327,199 @@ def vocales(lista):
     indice=0
 
 list="ezequielito es un capito"
-vocales(list)
+vocales(list)"""
+
+"""Inversión de cadenas:
+Haz una función que reciba una cadena y devuelva la cadena invertida."""
+
+"""def cadena_invertida(cadena):
+    cadena=cadena[::-1]
+    return cadena
+
+tamaño = int(input("Dime el tamaño de la lista: "))
+lista=[]
+
+while len(lista) < tamaño:
+    numero=int(input(f"{len(lista)+1}. Numero en el indice "))
+    lista.append(numero)
+
+cadena_final=cadena_invertida(lista)
+print(cadena_final)
+print("😎")
+"""
+
+
+"""def palindromo(palabra):
+    capicua = palabra[::-1]
+    if palabra == capicua:
+        print("Holly fokin shet, es un palindromo")
+    else:
+        print("mandame un palindromo, soquete")
+
+word="so"
+
+palindromo(word)"""
+
+"""def factorial (numero):
+    factorizado = 0
+    #si numero es 5 indice tiene que ser 1 menos osea 4
+    indice = numero - 1
+    #factorizado = 5 * 4
+    factorizado += numero * indice
+    #la proxima vez que se multiplique el indice sera uno menos osea 3
+    indice-=1
+    while indice !=0:
+        factorizado = factorizado * indice
+        indice -= 1
+    return factorizado
+
+def main():
+    a = 6
+    resultado = factorial(a)
+    print(resultado)
+
+main()"""
+
+"""Contar palabras:
+Crea una función que reciba una frase y devuelva cuántas palabras tiene.
+
+def cant_palabras(frase):
+    spliteado=frase.split()
+    return len(spliteado)
+
+
+poema = ""
+cantidad=cant_palabras(poema)
+print(cantidad)"""
+
+
+"""def suma_enteros(numero):
+    divididos = numero.split()
+    resultado_suma = divididos[0] + divididos[1]
+    return resultado_suma
+
+num = 22
+resultado = suma_enteros(num)
+print(resultado)
+
+"""
+
+"""
+Ejercicio con funciones con parámetros predeterminados
+Crear una función dividir que reciba dos parámetros, uno opcional y otro obligatorio,
+y devuelva el resultado de la división de ambos. Si se pasa un solo argumento,
+dividir / 1.
+"""
+"""
+def dividir(a,b=1):
+    c=a/b
+    return c
+
+a=4, b=2
+
+resultado=dividir(a,b)
+print=resultado
+"""
+"""ALGO PARA MEJORAR ES EN LA FUNCION HACER LA OPERACION DE LA DIVISION EN EL RETURN Y NO ES NECESARIO CREAR VARIABLES
+Y ASIGNARLE UN RESULTADO, PUEDO MANDAR DIRECTAMENTE EL RESULTADO"""
+
+"""
+A partir del siguiente código, utilizar range() para preguntar cuántos invitados
+vendrán a la fiesta.
+Luego, utilizar un bucle for para preguntar el nombre de cada uno
+y guardarlo en una lista. Ordenarlos alfabéticamente (opcional)
+Finalmente, convertir la lista en una tupla
+y mostrar la lista de invitados iterando sobre ellos
+"""
+"""def saludar(nombre):
+    print(f"¡Bienvenido {nombre}!")
+
+cantidad_invitados= int(input("cuantos invitados vendran a la fiesta? "))
+
+lista_de_invitados = []
+
+for nombre in range(cantidad_invitados):
+    lista_de_invitados.append(input("Nombre: "))
+
+lista_de_invitados.sort()
+
+tuple=tuple(lista_de_invitados)
+
+for invitado in lista_de_invitados:
+    saludar(invitado)
+"""
+"""
+colores={"rojo","celeste","azul","blanco","amarillo"}
+
+colores.add("verde")
+colores.remove("celeste")
+colores.discard("violeta")
+colores.discard("blanco")
+ 
+print(colores)"""
+
+"""
+=========
+EJERCICIO
+=========
+Solicitar al usuario datos sobre un producto:
+    - nombre
+    - precio
+    - cantidad
+Guardar en un diccionario y mostrar en la consola:
+"El producto < > cuesta $< > y su stock es < >."
+"""
+
+"""nombre=input("ingresa el nombre ")
+precio=float(input("ingresa el precio "))
+cantidad=int(input("ingresa la cantidad"))
+
+producto={
+    "nombre": nombre,
+    "precio": precio,
+    "cantidad": cantidad
+}
+
+print(producto)
+
+
+"""
+
+"""nota_uno = 10
+nota_dos = 6
+nota_tres = 8
+
+lista=[nota_dos, nota_tres, nota_uno]
+
+print(sum(lista)/len(lista))
+"""
+"""entrada=False
+while(entrada==False):
+    edad=int(input("ingresha tu edad tio "))
+    if(edad>0 and edad<=99):
+        entrada=True
+    else:
+        print("tu edad no es valida tio, vete a tomar por culo!")
+
+if(edad>=18):
+    print("jo-der tio, eresh mayior de edad! me cago en la puta!")
+
+else:
+    print("vete a tomar por culo, wachin de mierda")
+"""
+
+uno=300*6
+dos=500*4
+tres=700*2
+
+lista=[uno,dos,tres]
+lista=sum(lista)
+
+lista=lista/12
+
+if lista > 900:
+    print("ganas un sueldo mejor que lo normal")
+elif lista < 300:
+    print("fokin pobre panza de mierda")
+elif lista >= 300 and lista <= 900:
+    print(f"wena tio {lista}")
