@@ -508,7 +508,7 @@ else:
     print("vete a tomar por culo, wachin de mierda")
 """
 
-uno=300*6
+"""uno=300*6
 dos=500*4
 tres=700*2
 
@@ -522,4 +522,39 @@ if lista > 900:
 elif lista < 300:
     print("fokin pobre panza de mierda")
 elif lista >= 300 and lista <= 900:
-    print(f"wena tio {lista}")
+    print(f"wena tio {lista}")"""
+"""
+def contraseña():
+    contra=input("Contraseña: ")
+    if(contra == "1234"):
+        nombre=(input("Nombre: "))
+        return nombre
+
+def saludo(nombre):
+    print(f"Bienvenido {nombre}")
+
+booleano=False
+while(booleano==False):
+    rol = input("Admin o Profesor? ")
+    if(rol=="Admin"or rol=="Profesor"):
+        nombre=contraseña()
+        saludo(nombre)
+        break
+    else:
+        print("rol invalido")
+"""
+
+lista=[]
+tam=int(input("Cantidad: "))
+contador=0
+
+for nombre in range(tam):
+
+    nombre=(input("Nombre: "))
+    lista.append(nombre)
+
+for nombres in lista:
+    print(f"{contador}. {nombres}")
+    contador+=1
+
+
