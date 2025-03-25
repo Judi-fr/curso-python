@@ -544,7 +544,7 @@ while(booleano==False):
         print("rol invalido")
 """
 
-lista=[]
+"""lista=[]
 tam=int(input("Cantidad: "))
 contador=0
 
@@ -556,5 +556,8 @@ for nombre in range(tam):
 for nombres in lista:
     print(f"{contador}. {nombres}")
     contador+=1
+"""
 
+sadsad
+"""asdfdadf"""
 
