@@ -558,6 +558,6 @@ for nombres in lista:
     contador+=1
 """
 
-sadsad
-"""asdfdadf"""
+"""sadsad"""
+
 
