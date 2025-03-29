@@ -188,7 +188,7 @@ else:
 print(tabla)
 print(resultados)
 """
-lista_producto_precio = [
+"""lista_producto_precio = [
     ["vaso", 100],
     ["plato", 200],
     ["tenedor", 300],
@@ -207,3 +207,98 @@ for producto,precio in lista_producto_precio:
     print(f"{producto} con aumento del 10% = {resultado}")
 
 
+"""
+
+"""
+A partir del ejercicio anterior, hacer que el programa solicite
+al usuario si desea comprar más productos
+Si se opta por sí, agregar ese diccionario a la lista de productos comprados.
+Si se opta por no, entonces debe mostrar la compra total con sus respectivos datos
+*** USAR FUNCIONES, y NO USAR VARIABLES LOCALES ***
+"""
+
+def comprar(carrito):
+    nombre=input("Nombre del producto: ")
+    precio=int(input("Precio: "))
+    cantidad=int(input("Cantidad: "))
+    producto={
+        "nombre":nombre,
+        "precio":precio,
+        "cantidad":cantidad
+    }
+    carrito.append(producto)
+    print(f"Se a agregado el producto a el carrito!")
+    return carrito
+
+"""def listarCompras():
+    pass
+
+def main():
+    carrito_compras = []
+    inicio=int(input=("Desea agregar procutos al carrito? (si/no) "))
+    inicio=inicio.lower()[0]
+    if(inicio=="s"):
+        while(True):
+            carrito_compras=comprar(carrito_compras)
+    else:
+        print("Gracias por usar el programa!")
+
+main()"""
+
+"""cantidad_productos = int(input("¿Cuántos productos desea agregar al carrito?: "))
+for i in range(cantidad_productos):
+    print(f"\nProducto {i + 1}:")
+    nombre = input("Ingrese el nombre del producto: ")
+    precio = float(input("Ingrese el precio del producto: "))
+    cantidad = int(input("Ingrese la cantidad del producto: "))
+    producto = {
+        "nombre": nombre,
+        "precio": precio,
+        "cantidad": cantidad,
+    }
+    carrito_compras.append(producto)
+print(f"\nLista de compras:")
+for producto in carrito_compras:
+    print(
+        f"{producto['nombre']} - Precio: ${producto['precio']} - Cantidad: {producto['cantidad']}"
+    )"""
+
+"""
+Crear una clase llamada Persona que tenga dos instancias: nombre y apellido
+Crear 2 objetos (instancias) de Persona y mostrar sus atributos con print()
+"""
+"""
+class Persona():
+    def __init__(self,nombre,apellido):
+        self.nombre=nombre
+        self.apellido=apellido
+
+    def mostrarNombre(self):
+        print(f"Hola {self.nombre} {self.apellido} ")
+
+user1=Persona("Ezequiel","Rieznik")
+
+user1.mostrarNombre()"""
+
+"""
+Crear una clase llamada Ciudad
+tendrá un método que dé la bienvenida a la ciudad
+otro que muestre la población de la ciudad
+"""
+
+class Ciudad():
+
+    def __init__(self,nombre,poblacion):
+        self.nombre=nombre
+        self.poblacion=poblacion
+
+    def bienvenida(self):
+        print(f"Bienvenidos habitantes de {self.nombre}!")
+
+    def mostrarPoblacion(self):
+        print(f"Poblacion: {self.poblacion} Habitantes!")
+
+city=Ciudad("Del viso", "2")
+
+city.bienvenida()
+city.mostrarPoblacion()
