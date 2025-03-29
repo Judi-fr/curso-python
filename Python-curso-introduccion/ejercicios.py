@@ -560,4 +560,15 @@ for nombres in lista:
 
 """sadsad"""
 
+nombre=input("ingrese el nombre de el usuario ")
+materias=int(input("ingrese la cantidad de materias "))
+diccionario={nombre:materias}
+nombre=input("ingrese el nombre de el usuario ")
+materias=int(input("ingrese la cantidad de materias "))
+diccionario={nombre:materias}
 
+valores=diccionario.values()
+keys=diccionario.keys()
+
+print(keys)
+print(valores)
