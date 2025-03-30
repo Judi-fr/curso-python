@@ -560,3 +560,10 @@ for nombres in lista:
 
 """sadsad"""
 
+"""def rango(desde,hasta,intervalo):
+    lista=[]
+    for i in range(hasta):
+        lista.append(i)
+    print(lista[desde::intervalo])
+
+rango(5,100,3)"""
