@@ -286,14 +286,14 @@ tendrá un método que dé la bienvenida a la ciudad
 otro que muestre la población de la ciudad
 """
 
-class Ciudad():
+"""class Ciudad():
 
     def __init__(self,nombre,poblacion):
         self.nombre=nombre
         self.poblacion=poblacion
 
     def bienvenida(self):
-        print(f"Bienvenidos habitantes de {self.nombre}!")
+        print(f"Bienvenidos ciudadanos de {self.nombre}!")
 
     def mostrarPoblacion(self):
         print(f"Poblacion: {self.poblacion} Habitantes!")
@@ -301,4 +301,10 @@ class Ciudad():
 city=Ciudad("Del viso", "2")
 
 city.bienvenida()
-city.mostrarPoblacion()
+city.mostrarPoblacion()"""
+
+entrada=""
+if(entrada==False):
+    print("es false")
+elif(entrada==True):
+    print("es true")

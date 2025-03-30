@@ -3,17 +3,17 @@ import tkinter as tk
 
 def mostrar_bienvenida():
     nombre = entrada.get()
-    bienvenida = tk.Label(app, text=f"¡Bienvenido, {nombre}!", font=("Arial", 18), bg="black", fg="white")
+    bienvenida = tk.Label(app, text=f"¡Bienvenido, {nombre}!", font=("Arial", 18), bg="white", fg="white")
     bienvenida.place(relx=0.5, rely=0.5, anchor="center")
 
 
 def crear_entorno():
     app.title("Mi primera app con Tkinter")
-    app.geometry("400x300")
+    app.geometry("600x300")
     app.configure(bg="black")
 
     label = tk.Label(app, text="Ingresa tu nombre:", font=("Arial", 18), bg="black", fg="white")
-    label.place(relx=0.5, rely=0.3, anchor="center")
+    label.place(relx=1.5, rely=1.3, anchor="center")
 
     global entrada
     entrada = tk.Entry(app, font=("Arial", 18))
