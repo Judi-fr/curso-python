@@ -1,4 +1,4 @@
-import tkinter as tk
+"""import tkinter as tk
 
 
 def mostrar_bienvenida():
@@ -28,3 +28,27 @@ app = tk.Tk()
 crear_entorno()
 
 app.mainloop()
+
+
+print("si, esto esta pasando")
+time.sleep(5)
+print("si, esto esta pasando")
+"""
+import time
+frase=[" ◎"," ◎ "," ◎ O"," ◎ OS"," ◎ OSS"," ◎ OSS "," ◎ OSS P"," ◎ OSS Po"," ◎ OSS Pow"," ◎ OSS Powe"," ◎ OSS Power"," ◎ OSS Power!"]
+
+lista=[
+"▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒",
+"▒▒   ▒▒ ▒▒▒     ▒▒▒    ",
+"▒▒   ▒▒ ▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒",
+"▒▒   ▒▒     ▒▒▒     ▒▒▒",
+"▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒ ▒▒▒▒▒▒▒",
+]
+
+for i in lista:
+    print(i)
+    time.sleep(0.3) 
+for letra in frase:
+    print(letra,end="\r")
+    time.sleep(0.2)   
+print(" ◎ OSS Power!")

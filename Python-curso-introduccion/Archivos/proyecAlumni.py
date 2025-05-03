@@ -1,64 +1,64 @@
-from time import sleep
+class Postulante:
 
-def mostrar_alumnos(lista):
-    if(not lista):
-        print("No se han ingresado alumnos todavia")
-        print()
-        sleep(1)
-    else:
-        print()
-        print("Lista de alumnos: ")
-        for diccionario in lista:
-            print(f"{diccionario["nombre"]} - {diccionario["materias"]} cursos")
-            sleep(0.8)
-        print()
-
-def añadir(lista):
+    def __init__(self):
+        self.nombre=input("nombre: ")
+        self.edad=int(input("edad: "))
+        self.puesto=input("puesto: ")
+        self.experiencia=int(input("años de experiencia: "))
     
-    nombre=input("Nombre del alumno: ")
-    materias=int(input("Cantidad de materias: "))
-    diccionario={
-        "nombre":nombre,
-        "materias":materias,
-    }
-    lista.append(diccionario)
-    print("Alumno agregado!")
-    return lista
+    def get(self):
+        """print(f"nombre: {self.nombre}")
+        print(f"edad: {self.edad}")
+        print(f"puesto: {self.puesto}")
+        print(f"experiencia: {self.experiencia}")"""
+        return self.nombre, self.edad, self.puesto, self.experiencia
+        
+    def evaluar(self, edadMin, edadMax, puestos, experiencia):
+        self.evaluado="Pasó"
+        if not(self.edad >= edadMin and self.edad <=edadMax):
+            self.evaluado="No Pasó"
+            self.razon+="No cumple con la edad deseada.\n "
+        elif self.puesto != puestos[0] and self.puesto != puestos[1] and self.puesto != puestos[2]:
+            pass
 
-def buscar_alumno(lista):
-   alumno=input("Que alumno queres saber? ")
-   for diccionario in lista:
-       if(alumno==diccionario["nombre"]):
-           print(f"Materias: {diccionario["materias"]}")
 
+def main():
+    i=0
+    lista_postu=[]
 
-lista_alumnos=[]
-print("Ingrese el numero de la operacion que desea ejecutar: ")
-print("1 - Añadir un alumno a la lista.")
-print("2 - Ver la lista de alumnos.")
-print("3 - Ver las materias de un alumno.")
-print("4 - Salir.")
-opcion=int(input(">>> "))
-
-while(opcion!=4):
-    if(opcion==1):
-        lista_alumnos=añadir(lista_alumnos)
-    elif(opcion==2):
-        mostrar_alumnos(lista_alumnos)
-    elif(opcion==3):
-        buscar_alumno(lista_alumnos)
-    else:
-        print()
-        print("La opcion ingresada no es correcta, vuelva a intentarlo")
-
-    sleep(2)
+    print("1. Agregar un postulante")
+    print("2. Evaluar a 1 postulante")
+    print("3. Evaluarlos a todos")
+    print("0. Salir")
     print()
-    print("Ingrese el numero de la operacion que desea ejecutar: ")
-    print("1 - Añadir un alumno a la lista.")
-    print("2 - Ver la lista de alumnos.")
-    print("3 - Ver las materias de un alumno.")
-    print("4 - Salir.")
     opcion=int(input(">>> "))
 
-print("Gracias por utilizar el programa!")
+    while(opcion!=0):
 
+        if(opcion==1):
+            postulantes=Postulante()
+            lista_postu.append(postulantes.get())
+            print("estudiante agregado!")
+        elif(opcion==2):
+            nombre=input("indique el nombre del postulante que desea evaluar: ")
+            for tupla in lista_postu:
+                if tupla[i]==nombre:
+                    print("coincidio el nombre!")
+                    pass
+                else:
+                    i+=1
+
+        elif(opcion==3):
+            pass
+        else:
+            exit()
+
+        print("1. Agregar un postulante")
+        print("2. Evaluar a 1 postulante")
+        print("3. Evaluarlos a todos")
+        print("0. Salir")
+        print()
+        opcion=int(input(">>> "))
+
+
+main()

@@ -567,3 +567,30 @@ for nombres in lista:
     print(lista[desde::intervalo])
 
 rango(5,100,3)"""
+"""
+def operaciones(a,b):
+    suma=a+b
+    resta=a-b
+    multiplicacion=a*b
+    division=a/b
+    return (suma,resta,multiplicacion,division)
+
+operaciones = operaciones(10,2)
+print(operaciones[0])"""
+"""
+def crear_usuario(nombre,edad,rol="Usuario",admin=False):
+    if(edad<=0):
+        print("edad invalida")
+    
+    diccionario={
+        "nombre":nombre,
+        "edad":edad,
+        "rol":rol,
+    }
+    return diccionario
+
+diccionario=[]
+diccionario.append(crear_usuario("Ezequiel",24,"Admin",True))
+
+print(f"Nombre: {diccionario[0]["nombre"]}")"""
+
