@@ -83,7 +83,7 @@ print(consonantes)"""
 
 resultado = list(map(lambda x: str(x) +" pts",filter(lambda x: x > 10, numeros)))
 print(resultado)
-"""
+""""""
 
 lista = ["2", "4", "6", "8"]
 
@@ -96,7 +96,7 @@ palabras = ["python", "", "map", "", "filter", "lambda"]
 palabras = list(filter(lambda x: len(x)>0, palabras ))
 
 print(palabras)
-
+"""
 #_____________________________________________________________________________
 """primera = [7, 5, 10, 9, 8, 1, 3, 5, 6, 3, 8, 0, 10, 9, 2]
 segunda = [6, 9, 3, 7, 9, 10, 5, 10, 7, 4, 5, 3, 2, 10, 2]
@@ -144,7 +144,7 @@ def superior(funcion,lista):
 superior(cubo,lista)
 print(nueva_lsita)
 """
-def operaciones(a,b):
+"""def operaciones(a,b):
     suma=lambda a,b:a+b
     resta=lambda a,b: a-b
     multiplicacion=lambda a,b:a*b
@@ -153,7 +153,7 @@ def operaciones(a,b):
         return suma(a,b), resta(a,b), multiplicacion(a,b), division(a,b)
     else: 
         print("No enviaremos la division, no se puede dividir por 0")
-        return suma(a,b), resta(a,b), multiplicacion(a,b), 0
+        return suma(a,b), resta(a,b), multiplicacion(a,b), 0"""
 """
 bool=True
 
@@ -196,9 +196,41 @@ paises = {
 
 x=input("ingreso: ")
 recorrerDicc(x)
-"""
+""""""
 lista=["juan salvo","henry courtney","elizabeth bennet","marge simpson"]
 
 nueva_lista=list(map(lambda x: x.title(), lista))
 
 print(nueva_lista)
+
+import os
+def limpiar():
+    os.system("cls" if os.name in ("nt","ce","dos") else "clear")
+
+from functools import reduce
+"""
+class Solution(object):
+    def twoSum(self, nums, target):
+       for i in range(len(nums)):
+           for j in range(i+1,len(nums)):
+               if nums[i] + nums[j] == target:
+                   return i, j
+        
+
+Numeros=[]
+while(True):
+    entrada=input("Ingrese un numero (termina ingreso con 0) ")
+    try:
+        numero = int(entrada)
+        if numero == 0:
+            break
+        Numeros.append(numero)
+    except:
+        print("error")
+
+target=int(input("ingresa el target "))
+
+sol = Solution()
+Numeros=sol.twoSum(Numeros,target)
+print(Numeros)
+
