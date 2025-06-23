@@ -213,7 +213,7 @@ Trama – Marta                           Ballena – Llenaba                   
 Cardiografía – Radiográfica             Conejo – Encojo                         Demostración –  Domesticaron
 Desamparador – Desparramado             Polonia – Opalino                       Sopera – Sopear
 Conservadora – Conversadora             Ardientemente – Retenidamente           Áspero – Espora
-Irónicamente – Renacimiento             Riesgo – Sergio                         Aires – Aries
+Irónicamente – Renacimiento             Riesgo – Sergio                         Aires – AriesB
 Escandalizar – Zascandilear             Agonista – Santiago                     Presa – Pesar
 Enfriamiento – Refinamiento             Calor – Colar                           Esta – Ates
 Romina – Marino                         Prisa – París                           Astringencia – Transigencia

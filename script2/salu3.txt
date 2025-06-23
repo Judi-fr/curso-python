@@ -1,0 +1,4 @@
+@echo off
+python "C:\Users\ezeri\Documents\Python\script2\
+python script2.py
+pause

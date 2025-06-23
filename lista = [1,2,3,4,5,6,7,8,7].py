@@ -209,7 +209,7 @@ def limpiar():
 
 from functools import reduce
 """
-class Solution(object):
+"""class Solution(object):
     def twoSum(self, nums, target):
        for i in range(len(nums)):
            for j in range(i+1,len(nums)):
@@ -233,4 +233,45 @@ target=int(input("ingresa el target "))
 sol = Solution()
 Numeros=sol.twoSum(Numeros,target)
 print(Numeros)
+"""
+"""
+f = open("Archive.txt", "w")
+f.write("so un capo pibe, lo lograste campeon, champion of the wor, ")
 
+with open("Archive.txt", "r") as p:
+    texto=p.read()
+
+print(texto)
+
+f.close()
+
+with open("Archive.txt", "a") as f:
+    f.write("ueeepa lo volvite a abri, y ensima a escribi, ai can beliv, ai can flai, ai can touch the skai, nigga")
+    f.close()
+
+with open("Archive.txt", "r") as p:
+    texto=p.read()
+
+p.close()
+
+print(f"\a{texto}")"""
+
+import from 
+class Persona:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def nombre_completo(self):
+        print(f"{self.nombre} {self.apellido}")
+
+class Estudiante(Persona):
+    def setCarrera(self,carrera):
+        self.carrera = carrera
+    def mostrar(self):
+        print(f"{self.nombre} {self.apellido} {self.carrera}")
+#p = Persona("ezequiel","rieznik")
+e = Estudiante("ezequielito","reiznik")
+e.setCarrera("bostero")
+e.nombre_completo()
+e.mostrar()
