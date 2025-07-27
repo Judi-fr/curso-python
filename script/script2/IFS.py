@@ -50,9 +50,10 @@ comandos = {
     "playlist rock": "https://www.youtube.com/playlist?list=PLt6z7U7Xm5Yl7M42WwfozVg81Gz9kZxWC",
     "rock": "https://www.youtube.com/playlist?list=PLt6z7U7Xm5Yl7M42WwfozVg81Gz9kZxWC",
     #UNIVERSIDAD UTN
-    "facultad": "https://www.frgp.cvg.utn.edu.ar/",
-    "universidad": "https://www.frgp.cvg.utn.edu.ar/",
-    "utn": "https://www.frgp.cvg.utn.edu.ar/",
+    "facultad": "https://frgp.cvg.utn.edu.ar/",
+    "universidad": "https://frgp.cvg.utn.edu.ar/",
+    "utn": "https://frgp.cvg.utn.edu.ar/",
+    "facu":"https://frgp.cvg.utn.edu.ar/",
     #PEDIDOS YA
     "pedidos ya": "https://www.pedidosya.com.ar/?externalLogin=true",
     "pedidosya": "https://www.pedidosya.com.ar/?externalLogin=true",
@@ -78,42 +79,82 @@ comandos = {
     "capcut": "https://www.capcut.com/editor/F3DC8102-A125-4E37-AE1D-9D686FD8F195?...",
     "editor de video": "https://www.capcut.com/editor/F3DC8102-A125-4E37-AE1D-9D686FD8F195?...",
     #WHATSAPP
-    "whatsapp": "https://web.whatsapp.com/"
+    "whatsapp": "https://web.whatsapp.com/",
+    #ALUMNI
+    "curso" : "https://alumni.education/courses",
+    #TWITTER
+    "twitter" : "https://x.com/home",
+    "abrir twitter" : "https://x.com/home"
 }
+
+def analizar2(texto):
+    bool=False
+        
+    #ADMINISTRADOR DE TAREAS
+    if texto in ["administrador de tareas"]:
+        os.system("start taskmgr")
+        bool=True
+
+    #POKER
+    elif texto in ["poker","abrir poker"]:
+        os.system(r'"C:/Users/ezeri/AppData/Roaming/GGPCOM/bin/launcher.exe"')
+        bool=True
+
+    #VISUAL ESTUDIO
+    elif texto in ["visual estudio","abrir visual estudio"]:
+        os.system(r'"C:/Users/ezeri/AppData/Local/Programs/Microsoft VS Code/Code.exe"')
+        bool=True
+
+    #CODEBLOCKS
+    elif texto in ["codeblocks","abrir codeblocks"]:
+        os.system(r'"C:/Program Files/CodeBlocks/codeblocks.exe"')
+        bool=True
+
+    #RELOJ
+    elif texto in ["reloj"]:
+        os.system("start ms-clock:")
+        bool=True
+    
+    #CALCULADORA
+    elif texto in ["calculadora","abrir calculadora"]:
+        os.system("start calculator:")
+        bool=True
+
+    #COUNTER STRIKE
+    elif texto in ["counter"]:
+        pass
+
+    #LEAGUE OF LEGENDS
+    elif texto in ["lol"]:
+        pass
+
+    #ONE NOTE
+    elif texto in ["one note"]:
+        os.system(r'"C:/Program Files/Microsoft Office/root/Office16/ONENOTE.EXE"')
+        bool=True
+
+    #DOCUMENTOS
+    elif texto in ["facultad"]:
+        os.startfile( r'"C:/Users/ezeri/Documents/Facultad"')
+        os.system(r'"C:/Program Files/Microsoft Office/root/Office16/ONENOTE.EXE"')
+        os.system(r'"C:/Program Files/CodeBlocks/codeblocks.exe"')
+        os.system(f'start chrome "https://frgp.cvg.utn.edu.ar/"')
+        bool=True
+    
+    #FIN 
+    elif texto in ["fin del programa"]:
+        exit()
+        
+    return bool
 
 def analizar(texto):
     texto = quitar_acentos(texto.lower())
     url = comandos.get(texto)
-    print(1)
-    if url:
+    
+    if url is not None:
         os.system(f'start chrome "{url}"')
-
-#reloj
-#poker
-#administrador de tareas
-#codeblocks
-#visual estudio
-#descargas         (archivos)
-#"este equipo(C:)" (archivos)
-#imagenes          (archivos)
-#documentos        (archivos)
-#python            (archivos)
-#facultad          (archivos)
-#calculadora
-#musica judia
-#musica ilia topuria
-#pedo
-#counter
-#lol
-#
-
-key = "portugues"
-
-if key == "portugues":
-    if True:
-        pass
-    elif True:
-        pass
-
-elif key == True:
-    pass
+    else:
+        activado=analizar2(texto)
+        if activado == False:
+            texto=texto.replace(" ","+")
+            os.system(f"start https://www.google.com/search?q={texto}")
