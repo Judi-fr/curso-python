@@ -112,7 +112,15 @@ res = requests.get(url,headers=headers)
 
 USD = []
 
+
+"""
+print(res.text)
+print(res.headers)
+print(res.status_code)
+"""
+
 if res.status_code == 200:
+    
     for valor in res.json():
         nuevo = {
             "dia" if k == "d" else "valor" if k == "v" else k: v
