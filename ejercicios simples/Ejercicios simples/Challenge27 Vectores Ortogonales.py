@@ -9,6 +9,13 @@ Enunciado: Crea un programa que determine si dos vectores son ortogonales.
  * - Cada vector se podría representar como un array. Ejemplo: [1, -2]
 '''
 
+def es_ortogonal(u, v):
+    print("Es ortogonal" if u * v == 0 else "No es ortogonal")
+
+
+
+
+
 
 
 def areOrthogonal(vectorOne, vectorTwo): 
