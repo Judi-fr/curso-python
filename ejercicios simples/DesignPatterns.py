@@ -1,6 +1,7 @@
 """
+---------------------------------------------------------------------------------
 #singleton
-
+---------------------------------------------------------------------------------
 class logger():
     unico = None
     mensajes = []
@@ -29,7 +30,10 @@ logger2.leer()
 
 """
 """
+---------------------------------------------------------------------------------
 #factory
+---------------------------------------------------------------------------------
+
 from abc import ABC, abstractmethod 
 
 class animal(ABC):
@@ -59,8 +63,9 @@ animal2 = Factory.crear_animal("Gato")
 animal2.Hablar()
 """
 """
+---------------------------------------------------------------------------------
 #factory
-
+---------------------------------------------------------------------------------
 from abc import ABC, abstractmethod
 
 class NPC(ABC):
@@ -91,10 +96,10 @@ npc.Hablar()
 
 enepese = NPC()
 enepese.Hablar()
-"""
 
-"""#singleton
-
+---------------------------------------------------------------------------------
+""""""#singleton
+---------------------------------------------------------------------------------
 class logger():
     singleton = None
     logs = []
@@ -118,4 +123,43 @@ logger2 = logger()
 print("Son el mismo el singleton funciona" if logger1 == logger2 else "No funca")
 
 logger2.Mostrar()"""
+"""
+---------------------------------------------------------------------------------
+#strategy
+---------------------------------------------------------------------------------
+from abc import ABC, abstractmethod
 
+class estrategia(ABC):
+    @abstractmethod
+    def atack(self):
+        pass
+
+class Arco(estrategia):
+    def atack(self):
+        print("flechazo")
+
+class Espada(estrategia):
+    def atack(self):
+        print("espadazo")
+
+class Personaje():
+    def __init__(self,Estrategia:estrategia):
+        self.Estrategia = Estrategia
+
+    def set_estrategia(self, Estrategia:estrategia):
+        self.Estrategia = Estrategia
+    
+    def Actuar(self):
+        self.Estrategia.atack()
+    
+
+Personaje1 = Personaje(Arco())
+Personaje1.Actuar()
+Personaje1.set_estrategia(Espada())
+Personaje1.Actuar()
+"""
+"""
+if *presiona cuadrado* Personaje1.set_estrategia(espada()) 
+elif *enemigo a 1.5 metros* Personaje1.Actuar()
+"""
+#----------------------------------------------------------------------
