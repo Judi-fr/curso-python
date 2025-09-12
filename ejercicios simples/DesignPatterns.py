@@ -163,3 +163,47 @@ if *presiona cuadrado* Personaje1.set_estrategia(espada())
 elif *enemigo a 1.5 metros* Personaje1.Actuar()
 """
 #----------------------------------------------------------------------
+
+
+#repaso singleton, factory, strategy
+
+from abc import ABC, abstractmethod
+"""
+class logger():
+    singleton = None
+    logs = []
+    def __new__(cls):
+        if cls.singleton is None:
+            cls.singleton = super().__new__(cls)
+        return cls.singleton
+    
+    def add_message(cls,mensaje):
+        cls.logs.append(mensaje)
+    
+    def show_message(cls):
+        for log in cls.logs:
+            print(log)
+"""
+class persona(ABC):
+    @abstractmethod
+    def atacar(self):
+        pass
+class Tirador(persona):
+    def atacar(self):
+        print("pium")
+
+class Espadachin(persona):
+    def atacar(self):
+        print("hachiiin")
+
+class Factory():
+    def crear_persona(personaje:str):
+        if personaje == "Tirador":
+            return Tirador()
+        elif personaje == "Espadachin":
+            return Espadachin()
+        
+Factoria = Factory.crear_persona("Espadachin")
+Factoria.atacar()
+Factoria = Factory.crear_persona("Tirador")
+Factoria.atacar()

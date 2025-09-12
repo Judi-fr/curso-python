@@ -14,37 +14,35 @@ playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/AOE.mp3")
 
 os.system("cls")
 def jew():
-    volumen.setear_volumen(12)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/jew.mp3")
 
 def bobesponja():
-    volumen.setear_volumen(7)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/bobesponja.mp3")    
 
 def Bananero():
-    volumen.setear_volumen(12)
+    #volumen.setear_volumen(12)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/bananero.mp3")    
 
 def CsGO():
-    volumen.setear_volumen(12)
+    #volumen.setear_volumen(12)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/CsGO.mp3")    
 
 def picara():
-    volumen.setear_volumen(16)
+    #volumen.setear_volumen(16)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/mira-que-picara-que-sos.mp3")    
 
 def maryjane():
-    volumen.setear_volumen(9)
+    #volumen.setear_volumen(9)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/maryjane.mp3")    
 
 def macri():
-    volumen.setear_volumen(12)
+    #volumen.setear_volumen(12)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/macri.mp3")    
 
 
 def topturo():
 
-    volumen.setear_volumen(16)
+   #volumen.setear_volumen(16)
     img = cv2.imread("C:/Users/ezeri/Documents/Python/script/script2/img/Topuria4.jpg")
     cv2.imshow("el bastardo",img)
     cv2.waitKey(100)
