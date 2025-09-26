@@ -35,6 +35,9 @@ def maryjane():
     #volumen.setear_volumen(9)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/maryjane.mp3")    
 
+def momo2():
+    playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/momo2.mp3")
+
 def macri():
     #volumen.setear_volumen(12)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/macri.mp3")    
@@ -78,6 +81,7 @@ def main():
     while True:
         keyboard.add_hotkey('ctrl + F2',maryjane)
         keyboard.add_hotkey('ctrl + F3',picara)
+        keyboard.add_hotkey('ctrl + F4',momo2)
         keyboard.add_hotkey('ctrl + F7',macri)
         keyboard.add_hotkey('ctrl + F8',CsGO)
         keyboard.add_hotkey('ctrl + F9',Bananero)
