@@ -157,4 +157,4 @@ def analizar(texto):
         activado=analizar2(texto)
         if activado == False:
             texto=texto.replace(" ","+")
-            os.system(f"start https://www.google.com/search?q={texto}")
+            os.system(f"start https://www.google.com/search?q={texto}") 
