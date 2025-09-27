@@ -2,7 +2,7 @@ from playsound import playsound
 from colorama import init, Style , Fore
 import os
 import unicodedata
-
+import Modulo_AI as AI
 
 def quitar_acentos(texto):
     return ''.join(
@@ -157,4 +157,8 @@ def analizar(texto):
         activado=analizar2(texto)
         if activado == False:
             texto=texto.replace(" ","+")
-            os.system(f"start https://www.google.com/search?q={texto}") 
+            os.system(f"start https://www.google.com/search?q={texto}")
+        """ modulo = AI.moduloIA()
+            respuesta = modulo.prompt(texto)
+            modulo.text_to_speech(respuesta)"""
+            

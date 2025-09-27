@@ -3,16 +3,25 @@ import win32gui
 import win32con
 import speech_recognition as sr
 from playsound import playsound
-from IFS import *
+from IFS import analizar
+import os
 import volumen
 import cv2
 import keyboard
+import Modulo_AI as AI
 
 volumen.setear_volumen(18)
 playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/AOE.mp3")    
 
 
 os.system("cls")
+
+def ai():
+    modulo = AI.moduloIA()
+    texto = modulo.escuchar()
+    respuesta = modulo.prompt(texto)
+    modulo.text_to_speech(respuesta)
+
 def jew():
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/jew.mp3")
 
@@ -79,8 +88,9 @@ def escuchar_lo_dicho():
 
 def main():
     while True:
-        keyboard.add_hotkey('ctrl + F2',maryjane)
-        keyboard.add_hotkey('ctrl + F3',picara)
+        keyboard.add_hotkey('ctrl + F1',escuchar_lo_dicho)
+        keyboard.add_hotkey('ctrl + F2',ai)
+        keyboard.add_hotkey('ctrl + F3',maryjane)
         keyboard.add_hotkey('ctrl + F4',momo2)
         keyboard.add_hotkey('ctrl + F7',macri)
         keyboard.add_hotkey('ctrl + F8',CsGO)
@@ -88,7 +98,6 @@ def main():
         keyboard.add_hotkey('ctrl + F10',topturo)
         keyboard.add_hotkey('ctrl + F11',bobesponja)
         keyboard.add_hotkey('ctrl + F12',jew)
-        keyboard.add_hotkey('ctrl + F1',escuchar_lo_dicho)
         keyboard.wait()
 
 main()
