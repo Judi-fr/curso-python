@@ -40,9 +40,9 @@ def picara():
     #volumen.setear_volumen(16)
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/mira-que-picara-que-sos.mp3")    
 
-def maryjane():
+def ohmyga():
     #volumen.setear_volumen(9)
-    playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/maryjane.mp3")    
+    playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/ohmygaa.mp3")    
 
 def momo2():
     playsound("C:/Users/ezeri/Documents/Python/script/script2/audio/momo2.mp3")
@@ -90,7 +90,7 @@ def main():
     while True:
         keyboard.add_hotkey('ctrl + F1',escuchar_lo_dicho)
         keyboard.add_hotkey('ctrl + F2',ai)
-        keyboard.add_hotkey('ctrl + F3',maryjane)
+        keyboard.add_hotkey('ctrl + F3',ohmyga)
         keyboard.add_hotkey('ctrl + F4',momo2)
         keyboard.add_hotkey('ctrl + F7',macri)
         keyboard.add_hotkey('ctrl + F8',CsGO)
