@@ -36,10 +36,10 @@ class moduloIA():
         respuesta = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role":"system","content":"Me facilitas informacion interesante"},
+                {"role":"system","content":"Eres un asistente de ia que conoce todas las teorias conspiranoicas y cree en ellas."},
                 {"role":"user","content":texto},        
             ],
-            max_tokens=100
+            max_tokens=50
         )
         return respuesta
 
